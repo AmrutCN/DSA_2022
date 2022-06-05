@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flower Type Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body background="/static/images/background1.jpg">
+<!-- Input Form -->
+<div  class="input form">
+  <form action="{{url_for('predict')}}"method="post" id="input head">
+    <h1 id="heading">Flower Prediction Form</h1>
+    <h2 id="algorithm">Prediction Algorithm</h2>
+    <select name="predict_algor" id="algor">
+      <option value="logireg">Logistic Regression</option>
+      <option value="DTC">Decision Tree</option>
+      <option value="RFC">Random Forest</option>
+      <option value="KNN">K-Nearest Neighbours</option>
+      <option value="GNB">Naïve Bayes</option>
+      <option value="SVM">Support Vector Machine</option>
+      <option value="SGD">Stochastic Gradient Descent</option>
+</select>
+    <h3 id="input">Enter flower details</h3>
+    <input type="text" name="sl" placeholder="sepal length">
+    <br>
+    <input type="text" name="sw" placeholder="sepal width">
+    <br>
+    <input type="text" name="pl" placeholder="petal length">
+    <br>
+     <input type="text" name="pw" placeholder="petal width">
+    <br>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+ 
+</div>
+   
+</body>
+</html>
